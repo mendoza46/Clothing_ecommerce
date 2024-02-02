@@ -61,7 +61,7 @@ export default function ShoppingCartModal() {
                         <div>
                           <div className="flex justify-between text-base font-medium text-black">
                             <h3>{entry.name}</h3>
-                            <p className="ml-4">${entry.price}</p>
+                            <p className="ml-4">{entry.price}€</p>
                           </div>
                           <p className="mt-1 text-sm text-black line-clamp-2">
                             {entry.description}
@@ -92,7 +92,7 @@ export default function ShoppingCartModal() {
           <div className="border-t border-black px-4 py-6 sm:px-6">
             <div className="flex justify-between text-base font-medium text-black">
               <p>Subtotal:</p>
-              <p>${totalPrice}</p>
+              <p>{totalPrice}€</p>
             </div>
             <p className="mt-0.5 text-sm text-black">
               Shipping and taxes are calculated at checkout.

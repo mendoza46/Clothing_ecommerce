@@ -2,6 +2,8 @@ import Link from "next/link";
 import { simplifiedProduct } from "../interface";
 import { client } from "../lib/sanity";
 import Image from "next/image";
+import Footer from "../components/Footer";
+import '@fortawesome/fontawesome-free/css/all.css';
 
 async function getData(cateogry: string) {
   const query = `*[_type == "product" && category->name == "${cateogry}"] {
@@ -61,13 +63,14 @@ export default async function CategoryPage({
                   </p>
                 </div>
                 <p className="text-sm font-medium text-black">
-                  ${product.price}
+                  {product.price}€
                 </p>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
